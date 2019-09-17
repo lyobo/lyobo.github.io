@@ -145,6 +145,55 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-17T10:43:38.000Z">2019-09-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/coding/">coding</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 119 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/09/17/牛客刷题/">牛客刷题</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="求二叉树的最大深度"><a href="#求二叉树的最大深度" class="headerlink" title="求二叉树的最大深度"></a>求二叉树的最大深度</h2><p>主要思想——递归</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span></span><br><span class="line"><span class="hljs-keyword">public</span>:</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(TreeNode *root)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(!root)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=<span class="hljs-number">0</span>;</span><br><span class="line">        <span class="hljs-keyword">if</span>(root-&gt;right)</span><br><span class="line">        &#123;</span><br><span class="line">            r = maxDepth(root-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(root-&gt;left)</span><br><span class="line">        &#123;</span><br><span class="line">            l = maxDepth(root-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> max(l,r) + <span class="hljs-number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="求二叉树的最小深度"><a href="#求二叉树的最小深度" class="headerlink" title="求二叉树的最小深度"></a>求二叉树的最小深度</h2><p>注意递归停止的条件，考虑左右节点均为空的情况。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span></span><br><span class="line"><span class="hljs-keyword">public</span>:</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">run</span><span class="hljs-params">(TreeNode *root)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(!root)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=<span class="hljs-number">0</span>;</span><br><span class="line">        <span class="hljs-keyword">if</span>(root-&gt;right)</span><br><span class="line">        &#123;</span><br><span class="line">            r = run(root-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(root-&gt;left)</span><br><span class="line">        &#123;</span><br><span class="line">            l = run(root-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">         <span class="hljs-keyword">if</span>(l==<span class="hljs-number">0</span>||r==<span class="hljs-number">0</span>)</span><br><span class="line">         &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>+r+l;</span><br><span class="line">         &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> min(l,r) +<span class="hljs-number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        </div>
+		
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-10T13:28:15.000Z">2019-09-10</time>
                 
                 <div class="level-item">
@@ -285,7 +334,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
@@ -305,7 +354,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        1
                     </p>
                 </div>
             </div>
@@ -406,7 +455,7 @@
                 <span class="level-item">coding</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/research/">
@@ -423,6 +472,15 @@
 </div>
     
         
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/树/" style="font-size: 10px;">树</a>
+    </div>
+</div>
+
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -433,6 +491,19 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T10:43:38.000Z">2019-09-17</time></div>
+                    <a href="/2019/09/17/牛客刷题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">牛客刷题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/coding/">coding</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -478,7 +549,7 @@
                     <span class="level-item">九月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -495,6 +566,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/树/">
+                        <span class="tag">树</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
@@ -523,6 +601,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T10:43:38.000Z">2019-09-17</time></div>
+                    <a href="/2019/09/17/牛客刷题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">牛客刷题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/coding/">coding</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-10T13:28:15.000Z">2019-09-10</time></div>
                     <a href="/2019/09/10/测试文件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">测试文件</a>
                     <p class="is-size-7 is-uppercase">
@@ -563,7 +654,7 @@
                     <span class="level-item">九月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -580,6 +671,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/树/">
+                        <span class="tag">树</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
