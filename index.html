@@ -145,6 +145,143 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-26T08:00:49.000Z">2019-11-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/编程/">编程</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 498 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/26/剑指OFFER-数组篇/">剑指OFFER-数组篇</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="顺序矩阵判断数字是否存在"><a href="#顺序矩阵判断数字是否存在" class="headerlink" title="顺序矩阵判断数字是否存在"></a>顺序矩阵判断数字是否存在</h2><h3 id="思路1"><a href="#思路1" class="headerlink" title="思路1"></a>思路1</h3><p>暴力方法，直接进行顺序遍历</p>
+<h3 id="思路2"><a href="#思路2" class="headerlink" title="思路2"></a>思路2</h3><p>想到矩阵左下角为特殊位置，上面的值都比他小，右边的值都比他大<br>通过比较的数字和左下角数字的比较，进而进行追溯找到对应区间。</p>
+<h2 id="构建乘积数组"><a href="#构建乘积数组" class="headerlink" title="构建乘积数组"></a>构建乘积数组</h2><p>题目：给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]*A[1]*…*A[i-1]*A[i+1]*…*A[n-1]。不能使用除法。</p>
+<p>思路：重点要考虑i左边和右边乘积的递归规律<br>假如左边乘积是C[i]<br>C[0] = 1<br>C[1] = C[0] * A[0]<br>C[2] = C[1] * A[1]<br>右侧乘积同理，如此递归可以减少计算代价，避免重复计算</p>
+<p>重点在于找规律。</p>
+<h2 id="找重复数字"><a href="#找重复数字" class="headerlink" title="找重复数字"></a>找重复数字</h2><p>题目：在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是第一个重复的数字2。</p>
+<h3 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h3><p>暴力法，从头遍历，没有的存进temp，新data存在于temp就输入有重复的，否则继续</p>
+<h3 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h3><p>题目里写了数组里数字的范围保证在0 ~ n-1 之间，所以可以利用现有数组设置标志，当一个数字被访问过后，可以设置对应位上的数 + n，之后再遇到相同的数时，会发现对应位上的数已经大于等于n了，那么直接返回这个数即可。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">n = len(numbers)</span><br><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):</span><br><span class="line">    index = numbers[i]</span><br><span class="line">    <span class="hljs-keyword">if</span> index &gt;= n:</span><br><span class="line">        index -= n</span><br><span class="line">    <span class="hljs-keyword">if</span> numbers[index] &gt;= n:</span><br><span class="line">        <span class="hljs-keyword">return</span> index</span><br><span class="line">    numbers[index] = numbers[index] + n</span><br><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+		
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-01T06:08:08.000Z">2019-11-01</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 0 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/01/20191101140808/">20191101140808</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+		
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-11T04:06:31.000Z">2019-10-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 0 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/11/20191011120631/">20191011120631</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+		
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-17T10:43:38.000Z">2019-09-17</time>
                 
                 <div class="level-item">
@@ -334,7 +471,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        6
                     </p>
                 </div>
             </div>
@@ -344,7 +481,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
@@ -354,7 +491,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        2
                     </p>
                 </div>
             </div>
@@ -465,6 +602,14 @@
             <span class="level-end">
                 <span class="level-item tag">1</span>
             </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/编程/">
+            <span class="level-start">
+                <span class="level-item">编程</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
         </a></li>
             </ul>
         </div>
@@ -477,7 +622,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/树/" style="font-size: 10px;">树</a>
+        <a href="/tags/数组/" style="font-size: 10px;">数组</a> <a href="/tags/树/" style="font-size: 10px;">树</a>
     </div>
 </div>
 
@@ -491,6 +636,45 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-26T08:00:49.000Z">2019-11-26</time></div>
+                    <a href="/2019/11/26/剑指OFFER-数组篇/" class="title has-link-black-ter is-size-6 has-text-weight-normal">剑指OFFER-数组篇</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编程/">编程</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-01T06:08:08.000Z">2019-11-01</time></div>
+                    <a href="/2019/11/01/20191101140808/" class="title has-link-black-ter is-size-6 has-text-weight-normal">20191101140808</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T04:06:31.000Z">2019-10-11</time></div>
+                    <a href="/2019/10/11/20191011120631/" class="title has-link-black-ter is-size-6 has-text-weight-normal">20191011120631</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -518,19 +702,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-10T10:02:23.302Z">2019-09-10</time></div>
-                    <a href="/2019/09/10/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/research/">research</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -542,6 +713,28 @@
             时间轴
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -566,6 +759,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数组/">
+                        <span class="tag">数组</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/树/">
@@ -601,6 +801,45 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-26T08:00:49.000Z">2019-11-26</time></div>
+                    <a href="/2019/11/26/剑指OFFER-数组篇/" class="title has-link-black-ter is-size-6 has-text-weight-normal">剑指OFFER-数组篇</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编程/">编程</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-01T06:08:08.000Z">2019-11-01</time></div>
+                    <a href="/2019/11/01/20191101140808/" class="title has-link-black-ter is-size-6 has-text-weight-normal">20191101140808</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T04:06:31.000Z">2019-10-11</time></div>
+                    <a href="/2019/10/11/20191011120631/" class="title has-link-black-ter is-size-6 has-text-weight-normal">20191011120631</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T10:43:38.000Z">2019-09-17</time></div>
                     <a href="/2019/09/17/牛客刷题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">牛客刷题</a>
                     <p class="is-size-7 is-uppercase">
@@ -623,19 +862,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-10T10:02:23.302Z">2019-09-10</time></div>
-                    <a href="/2019/09/10/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/research/">research</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -647,6 +873,28 @@
             时间轴
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -671,6 +919,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数组/">
+                        <span class="tag">数组</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/树/">
